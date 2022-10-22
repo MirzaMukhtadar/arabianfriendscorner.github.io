@@ -1,0 +1,634 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+#navbar {
+    flex-direction: column;
+}
+
+#navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services Section */
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Clients Section */
+#client-section {
+    position: relative;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../bg.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+/* Header starts here */
+
+.headerbox {
+    /* background-image: url("./assests/img/logo.png"); */
+    background-image: url("https://media.istockphoto.com/photos/shawarma-chicken-roll-in-a-pita-with-fresh-vegetables-cream-sauce-and-picture-id925749406?k=20&m=925749406&s=612x612&w=0&h=Xi1IUrGnHBH5ArKpBTMtOawrADbZyO-Qh4LYL_0JkUE=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 103vh;
+    width: 100vw;
+
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    background-color: #ff7600;
+
+    height: 80px;
+}
+
+.nav-link>a {
+    margin: 0 15px;
+}
+
+.navbar>a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Content starts here */
+.description {
+    display: flex;
+    justify-content: space-between;
+    /* width: 124%; */
+    border: 2px solid #ff7600;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.descfirst {
+    /* display: flex;
+    justify-content: space-between; */
+    width: 80%px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 15px;
+}
+
+.descsecond {
+    /* display: flex;
+    justify-content: space-between; */
+    width: 80%px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 15px;
+}
+
+.descthird {
+    /* display: flex;
+    justify-content: space-between; */
+    width: 80%px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 15px;
+}
+
+.center {
+    text-align: center;
+    color: #ff7600;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+
+}
+
+/* .h-secondry {
+    font-size: 2.8rem;
+    padding: 12px;
+} */
+
+/* #services {
+    margin: 34px;
+    display: flex;
+} */
+
+#services .box {
+    border: 2px solid#ff7600;
+    padding: 30px;
+    margin: 3px 6px;
+    border-radius: 30px;
+    /* background-image: url("https://media.istockphoto.com/photos/black-paper-texture-background-with-spotlight-picture-id175413535?b=1&k=20&m=175413535&s=170667a&w=0&h=Ezl5v26kkWsWGd6RqpJIwIdnNDVKoOuEAd1gdwtGE2I="); */
+    background-color: #221e1e;
+
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+    width: -webkit-fill-available;
+
+}
+
+.color {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.paraclr {
+    color: white;
+}
+
+/* footer */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #e50f0f;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+
+}
+
+
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #ff7600;
+    color: white;
+    height: 200px;
+}
+
+.fa-twitter:hover {
+    background-color: blue;
+}
+
+.fa-instagram:hover {
+    background-color: crimson;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: black;
+}
+
+.homeclr {
+    text-decoration: none;
+    color: black;
+}
+
+.footerconatiner {
+    margin: 5%;
+}
+
+/* About us section starts */
+.containerabout {
+    background-color: #ff7600;
+    padding: 34px;
+    margin: 34px;
+
+    border: 2px solid #070707;
+}
+
+#aboutdisplay {
+    display: flex;
+    margin: 33p x;
+    justify-content: space-between;
+}
+
+.aboutustext {
+    text-align: center;
+}
+
+.aboutbox1 {
+    border: 2px solid black;
+    margin: 3px 6px;
+    padding: 49px;
+    width: 30%;
+
+}
+
+.aboutbox2 {
+    border: 2px solid black;
+    margin: 3px 6px;
+    padding: 49px;
+    width: 30%;
+}
+
+.aboutbox3 {
+    border: 2px solid black;
+    margin: 3px 6px;
+    padding: 49px;
+    width: 30%;
+}
+
+#aboutdisplay img {
+    height: 160px;
+    margin: 10px auto;
+    display: block;
+
+}
+
+/* Order form */
+#alignment {
+    margin-left: 34%;
+    margin-right: auto;
+}
+
+.orderbox {
+    padding: 34px;
+    margin: 34px;
+    border: 2px solid #070707;
+}
+
+.order {
+
+
+    margin: 9px;
+    display: flex;
+    padding: 18px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.orderformH {
+    margin: 14px 115px 7px;
+    text-align: center;
+    padding: 13px;
+
+}
+
+.productselect {
+    margin-right: 20px;
+}
+
+.orderbtn {
+    margin: 14px 115px 7px;
+    text-align: center;
+    padding: 13px;
+    margin-left: auto;
+}
+
+.plcdorderbtn {
+    width: 108px;
+    background-color: #ff7600;
+    height: 27px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.odertable {
+    background-color: aquamarine;
+    margin-left: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+hr.new5 {
+    border: 2px solid #ff7600;
+    border-radius: 5px;
+}
+
+.tablecenter {
+    margin-left: 34%;
+}
+
+.containercontact {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #ff7600;
+    padding: 34px;
+    margin: 34px auto;
+    width: 94vw;
+}
+
+/* .contactlable {
+    margin: 15px;
+    /* padding: 7px;
+    border-radius: 6px;
+    border: none; */
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #221e1e;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* Responsive*/
+@media (max-width: 756px) {
+    .headerbox {
+        width: 100%;
+    }
+
+
+}
+
+/* ************* */
+.formhover:hover {
+
+    transition: 0.5s all ease-in-out
+}
+
+img:hover {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* ************* */
+
+.navbar {
+    overflow: hidden;
+    background-color: #ff7600;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+
+}
+
+.navbar a:hover {
+    border-bottom: 3px dotted black;
+    transition: ease;
+    color: #070707;
+}
